@@ -26,3 +26,9 @@ replay_pid*
 
 softwares/
 out/
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+**/target/
+.idea
+**/.gitignore
