@@ -32,3 +32,4 @@ out/
 **/target/
 .idea
 **/.gitignore
+desktop.ini
