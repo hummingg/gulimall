@@ -21,6 +21,8 @@ bcdedit /set hypervisorlaunchtype off
 
 [解决Vagrant 使用中发生的 vagrant@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic). 错误 | 码农家园 (codenong.com)](https://www.codenong.com/cs106366521/)
 
+[(4条消息) vagrant up报错：io.rb:32:in `encode‘: “\xAA\xE5“ from GBK to UTF-8 (Encoding::UndefinedConversionError)_"\\xab\\xe9\" from gbk to utf-8 (encoding::undefin_STUPID MAN的博客-CSDN博客](https://blog.csdn.net/qq_42261895/article/details/121687073)
+
 
 
 Vagrantfile
@@ -35,6 +37,8 @@ ping 222.201.191.136
 
 ### git
 
+> 初始化仓库
+
 初始化文件夹
  `git init` 
 
@@ -44,12 +48,22 @@ ping 222.201.191.136
 提交commit信息，xxx代表着所要提交的信息
  `git commit -m "init"` 
 
-添加远程仓库链接,yyy为git地址
+添加远程仓库链接
 
 git remote add origin git@github.com:hummingg/gulimall.git
 
 上传
 git pull origin main --allow-unrelated-histories
+
+
+
+> stash before pull
+
+git stash
+
+git pull
+
+git stash pop
 
 
 
@@ -84,7 +98,7 @@ sudo docker run -p 3306:3306 --name mysql \
 -d mysql:5.7
 
 sudo docker exec -it mysql /bin/bash
-sudo docker restart msyql
+sudo docker restart mysql
 ```
 
 ```
@@ -115,7 +129,8 @@ sudo touch /mydata/redis/conf/redis.conf
 sudo docker run -p 6379:6379 --name redis \
 -v /mydata/redis/data:/data \
 -v /mydata/redis/conf/redis.conf:/etc/redis/redis.conf \
--d redis redis-server /etc/redis/redis.conf
+-d redis redis-server /etc/redis/redis.conf \
+--requirepass "mypassword"
 
 sudo docker exec -it redis redis-cli
 ```
@@ -159,5 +174,22 @@ appendonly yes
 		<maven.compiler.target>1.8</maven.compiler.target><maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
 	</properties>
 </profile>
+```
+
+
+
+### nodejs
+
+[Index of /dist/v10.16.3/ (nodejs.org)](https://nodejs.org/dist/v10.16.3/)
+
+```
+npm config set registry http://registry.npm.taobao.org/
+
+npm install
+npm run dev
+
+# something maybe wrong
+npm install --global --production windows-build-tools
+npm config set msvs_version 2017
 ```
 
