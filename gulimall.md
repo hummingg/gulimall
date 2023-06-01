@@ -195,11 +195,24 @@ npm config set msvs_version 2017
 
 
 
+### 快速开发
+
+
+
 admin: 后台管理系统
+
+
+
+generator:
+
+#### TODO
+
+- 有些库的表前缀不一致，后期可能有问题。
+- 
 
 > oms: order
 
-
+http://localhost:8080/order/order/list
 
 >  pms: product
 
