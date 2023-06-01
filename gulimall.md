@@ -210,33 +210,57 @@ npm config set msvs_version 2017
 
 
 
-#### oms: order
+#### gulimall-coupon
 
-http://localhost:8080/order/order/list
+sms, 7000
 
-
-
-#### pms: product
-
-http://localhost:8080/product/brand/list
-
-
-
-#### sms: coupon, 优惠sale
+优惠**s**ale
 
 http://localhost:8080/coupon/coupon/list
 
 
 
-#### ums: user = member
+#### gulimall-member
+
+ums, 8000
+
+user = member
 
 http://localhost:8080/member/member/list
 
 
 
-#### wms: ware
+#### gulimall-order
+
+oms, 9000
+
+http://localhost:8080/order/order/list
+
+
+
+#### gulimall-product
+
+pms, 10000
+
+http://localhost:8080/product/brand/list
+
+yundetectservice.exe占用端口号10000
+
+netstat -ano|findstr 10000
+
+tasklist|findstr  进程号
+
+taskkill /f /t /im yundetectservice.exe
+
+
+
+#### gulimall-ware
+
+wms, 11000
 
 http://localhost:8080/ware/wareinfo/list
 
 longblob 对应 byte[]类型？
+
+
 
