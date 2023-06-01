@@ -67,6 +67,22 @@ git stash pop
 
 
 
+> 放弃本地文件修改（未add）
+
+- 放弃单个文件的修改
+
+```undefined
+git checkout -- filename
+```
+
+- 放弃所有文件修改
+
+```undefined
+git checkout .
+```
+
+
+
 ### docker
 
 [Install Docker Engine on CentOS | Docker Documentation](https://docs.docker.com/engine/install/centos/)
@@ -206,7 +222,19 @@ npm config set msvs_version 2017
 
 #### admin: 后台管理系统
 
-前端：8001，后端：8080.
+前端：6001，后端：6002.
+
+6000被Chrome列为不安全端口，无法调用，ERR_UNSAFE_PORT。
+
+
+
+#### gulimall-common
+
+Maven Module。
+
+以下几个微服务的共同依赖，代码来自renren-fast.common。
+
+pom含数据库依赖，所以微服务无需再次依赖数据库。
 
 
 
