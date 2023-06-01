@@ -193,3 +193,25 @@ npm install --global --production windows-build-tools
 npm config set msvs_version 2017
 ```
 
+
+
+admin: 后台管理系统
+
+> oms: order
+
+
+
+>  pms: product
+
+http://localhost:8080/product/brand/list
+
+> sms: coupon, 优惠sale
+
+http://localhost:8080/coupon/coupon/list
+
+
+
+ums: user = member
+
+wms: ware
+
