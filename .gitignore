@@ -25,6 +25,7 @@ replay_pid*
 
 
 softwares/
+docs/
 out/
 **/mvnw
 **/mvnw.cmd
@@ -33,3 +34,5 @@ out/
 .idea
 **/.gitignore
 desktop.ini
+**/*.yml
+**/*.properties
