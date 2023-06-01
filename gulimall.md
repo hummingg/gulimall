@@ -197,38 +197,46 @@ npm config set msvs_version 2017
 
 ### 快速开发
 
-
-
-admin: 后台管理系统
-
-
-
-generator:
+开源项目：renren-fast、 renren-fast-vue、renren-generator
 
 #### TODO
 
 - 有些库的表前缀不一致，后期可能有问题。
 - 
 
-> oms: order
+#### admin: 后台管理系统
+
+前端：8001，后端：8080.
+
+
+
+#### oms: order
 
 http://localhost:8080/order/order/list
 
->  pms: product
+
+
+#### pms: product
 
 http://localhost:8080/product/brand/list
 
-> sms: coupon, 优惠sale
+
+
+#### sms: coupon, 优惠sale
 
 http://localhost:8080/coupon/coupon/list
 
 
 
-> ums: user = member
+#### ums: user = member
 
 http://localhost:8080/member/member/list
 
-> wms: ware
 
 
+#### wms: ware
+
+http://localhost:8080/ware/wareinfo/list
+
+longblob 对应 byte[]类型？
 
