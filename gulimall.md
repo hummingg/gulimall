@@ -211,7 +211,11 @@ http://localhost:8080/coupon/coupon/list
 
 
 
-ums: user = member
+> ums: user = member
 
-wms: ware
+http://localhost:8080/member/member/list
+
+> wms: ware
+
+
 
