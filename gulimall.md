@@ -114,7 +114,7 @@ sudo docker run -p 3306:3306 --name mysql \
 -d mysql:5.7
 
 sudo docker exec -it mysql /bin/bash
-sudo docker restart msyql
+sudo docker restart mysql
 sudo docker update mysql --restart=always
 ```
 
@@ -215,6 +215,8 @@ npm config set msvs_version 2017
 
 ### 快速开发
 
+[人人开源 (gitee.com)](https://gitee.com/renrenio/)
+
 开源项目：renren-fast、 renren-fast-vue、renren-generator
 
 #### TODO
@@ -223,6 +225,8 @@ npm config set msvs_version 2017
 - 
 
 #### admin: 后台管理系统
+
+数据库：gulimall_admin
 
 前端：6001，后端：6002.
 
@@ -242,37 +246,37 @@ pom含数据库依赖，所以微服务无需再次依赖数据库。
 
 #### gulimall-coupon
 
-sms, 7000
-
 优惠**s**ale
 
 http://localhost:8080/coupon/coupon/list
+
+sms, 7000
 
 
 
 #### gulimall-member
 
-ums, 8000
-
 user = member
 
 http://localhost:8080/member/member/list
+
+ums, 8000
 
 
 
 #### gulimall-order
 
-oms, 9000
-
 http://localhost:8080/order/order/list
+
+oms, 9000
 
 
 
 #### gulimall-product
 
-pms, 10000
-
 http://localhost:8080/product/brand/list
+
+pms, 10000
 
 yundetectservice.exe占用端口号10000
 
@@ -286,9 +290,9 @@ taskkill /f /t /im yundetectservice.exe
 
 #### gulimall-ware
 
-wms, 11000
-
 http://localhost:8080/ware/wareinfo/list
+
+wms, 11000
 
 longblob 对应 byte[]类型？
 
