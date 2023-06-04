@@ -34,5 +34,24 @@ out/
 .idea
 **/.gitignore
 desktop.ini
-**/*.yml
+**/*-secret.yml
 **/*.properties
+
+
+# Frond End Files
+**/node_modules/
+**/dist/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/test/unit/coverage/
+**/test/e2e/reports/
+**/selenium-debug.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
