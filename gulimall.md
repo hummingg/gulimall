@@ -114,7 +114,8 @@ sudo docker run -p 3306:3306 --name mysql \
 -d mysql:5.7
 
 sudo docker exec -it mysql /bin/bash
-sudo docker restart mysql
+sudo docker restart msyql
+sudo docker update mysql --restart=always
 ```
 
 ```
@@ -149,6 +150,7 @@ sudo docker run -p 6379:6379 --name redis \
 --requirepass "mypassword"
 
 sudo docker exec -it redis redis-cli
+sudo docker update redis --restart=always
 ```
 
 ```
