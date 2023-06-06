@@ -5,6 +5,8 @@ import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +27,19 @@ import com.hummingg.common.utils.R;
  * @email xuhuiming6991@gmail.com
  * @date 2023-06-01 15:00:55
  */
+
+// 自动跟随配置中心的配置
+@RefreshScope
 @RestController
 @RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    @Value("${coupon.user.name}")
+    private String name;
+    @Value("${coupon.user.age}")
+    private int age;
 
     /**
      * 列表
@@ -87,4 +97,21 @@ public class CouponController {
         return R.ok();
     }
 
+    /**
+     * 测试远程调用
+     */
+    @RequestMapping("/member/list")
+    public R memberCoupons(){
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满10减10");
+        return R.ok().put("coupons", Arrays.asList(couponEntity));
+    }
+
+    /**
+     * 测试配置中心
+     */
+    @RequestMapping("test")
+    public R test(){
+        return R.ok().put("name", name).put("age", age);
+    }
 }

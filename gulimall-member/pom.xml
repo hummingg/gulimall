@@ -5,7 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.12</version>
+<!--        <version>2.7.12</version>-->
+        <version>2.1.8.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hummingg.gulimall</groupId>
@@ -15,7 +16,9 @@
     <description>gulimall-member</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>2021.0.7</spring-cloud.version>
+<!--        <spring-cloud.version>2021.0.7</spring-cloud.version>-->
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+
     </properties>
     <dependencies>
         <dependency>
@@ -26,12 +29,25 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
+<!--        No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-loadbalancer</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>4.12</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.hummingg.gulimall</groupId>
             <artifactId>gulimall-common</artifactId>

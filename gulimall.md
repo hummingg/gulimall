@@ -286,6 +286,8 @@ tasklist|findstr  进程号
 
 taskkill /f /t /im yundetectservice.exe
 
+http://localhost:10000/product/brand/list
+
 
 
 #### gulimall-ware
@@ -297,4 +299,77 @@ wms, 11000
 longblob 对应 byte[]类型？
 
 
+
+
+### windows dos type 中文乱码
+https://www.cnblogs.com/lexus/archive/2012/03/15/2398652.html
+
+通过 chcp命令改变代码页，UTF-8的代码页为65001 
+
+```chcp 65001```
+
+
+
+### openfeign spring-cloud-alibaba
+
+https://spring.io/projects/spring-cloud-alibaba#overview
+
+https://github.com/alibaba/spring-cloud-alibaba
+
+gulimall-common
+
+```
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+            <version>2.1.0.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+```
+ <dependency>
+     <groupId>com.alibaba.cloud</groupId>
+     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+ </dependency>
+```
+
+实现功能：gulimall-member 远程调用 gulimall-coupon 获取会员的优惠券列表
+
+gulimall-coupon
+
+```
+@EnableDiscoveryClient
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: gulimall-coupon
+```
+
+http://127.0.0.1:8848/nacos/
+
+[No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalanc_一碗谦谦粉的博客-CSDN博客](https://blog.csdn.net/weixin_45764765/article/details/128825554)
+
+[feign 【已解决】报错 org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient.choose_HotRabbit.的博客-CSDN博客](https://blog.csdn.net/qq_52476654/article/details/125692501)
+
+[添加openfeign出现Error creating bean with name_梁山教父的博客-CSDN博客](https://blog.csdn.net/weixin_55127182/article/details/127261363)
+
+http://localhost:7000/coupon/coupon/member/list
+
+http://localhost:8000/member/member/coupons
+
+
+
+### nacos config
+
+bootstrap.properties 未生效，可能是springboot版本问题（2.7），调整为课程版本。
 
