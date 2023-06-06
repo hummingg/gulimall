@@ -1,6 +1,10 @@
 spring:
   profiles:
     include: secret
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
