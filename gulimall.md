@@ -373,3 +373,5 @@ http://localhost:8000/member/member/coupons
 
 bootstrap.properties 未生效，可能是springboot版本问题（2.7），调整为课程版本。
 
+[程序包org.junit.jupiter.api不存在_慕白Lee的博客-CSDN博客](https://blog.csdn.net/libusi001/article/details/107718432)
+
